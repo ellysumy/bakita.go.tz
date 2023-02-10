@@ -1,0 +1,113 @@
+<x-layout bodyClass="g-sidenav-show  bg-gray-200">
+    <x-navbars.sidebar activePage="profile"></x-navbars.sidebar>
+    <div class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
+        <!-- Navbar -->
+        <x-navbars.navs.auth titlePage='Add Words'></x-navbars.navs.auth>
+        <!-- End Navbar -->
+        <div class="container-fluid px-2 px-md-4">
+            <div class="page-header min-height-300 border-radius-xl mt-4"
+                style="background-image: url('https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+                <span class="mask  bg-gradient-primary  opacity-6"></span>
+            </div>
+            <div class="card card-body mx-3 mx-md-4 mt-n6">
+                <div class="row gx-4 mb-2">
+                    <div class="col-auto">
+                        <div class="avatar avatar-xl position-relative">
+                            
+                        </div>
+                    </div>
+                    <div class="col-auto my-auto">
+                        <div class="h-100">
+                            <h5 class="mb-1">
+                                Contents | Swahili Words
+                            </h5>
+                            <p class="mb-0 font-weight-normal text-sm">
+                                Creating a new Word
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
+                        <div class="nav-wrapper position-relative end-0">
+                            <ul class="nav nav-pills nav-fill p-1" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link mb-0 px-0 py-1 active " data-bs-toggle="tab" href="javascript:;"
+                                        role="tab" aria-selected="true">
+                                        <i class="material-icons text-lg position-relative">home</i>
+                                        <span class="ms-1">App</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link mb-0 px-0 py-1 " data-bs-toggle="tab" href="javascript:;"
+                                        role="tab" aria-selected="false">
+                                        <i class="material-icons text-lg position-relative">email</i>
+                                        <span class="ms-1">Messages</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link mb-0 px-0 py-1 " data-bs-toggle="tab" href="javascript:;"
+                                        role="tab" aria-selected="false">
+                                        <i class="material-icons text-lg position-relative">settings</i>
+                                        <span class="ms-1">Settings</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+
+     <form method='POST' action='{{ route('words.store') }}' enctype="multipart/form-data">
+                            @csrf
+                            <div class="row">
+                                
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label">Word Tittle</label>
+                                    <input type="text" name="word" class="form-control border border-2 p-2" value='{{old('word')}}''>
+                                    @error('word')
+                                <p class='text-danger inputerror'>{{ $message }} </p>
+                                @enderror
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label">Meaning</label>
+                                    <input type="text" name="meaning" class="form-control border border-2 p-2" value='{{old('meaning')}}''>
+                                    @error('meaning')
+                                <p class='text-danger inputerror'>{{ $message }} </p>
+                                @enderror
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label">Example 1</label>
+                                    <input type="text" name="example1" class="form-control border border-2 p-2" value='{{old('example1')}}''>
+                                    @error('example1')
+                                <p class='text-danger inputerror'>{{ $message }} </p>
+                                @enderror
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label">Example2</label>
+                                    <input type="text" name="example2" class="form-control border border-2 p-2" value='{{old('example2')}}''>
+                                    @error('example2')
+                                <p class='text-danger inputerror'>{{ $message }} </p>
+                                @enderror
+                                </div>
+                                
+                                
+                                <div class="mb-3 col-md-12">
+                                    <label for="floatingTextarea2">Description</label>
+                                    <textarea class="form-control border border-2 p-2"
+                                        placeholder=" Content descriptions" id="floatingTextarea2" name="description"
+                                        rows="4" cols="50">{{ old('description')}}</textarea>
+                                        @error('description')
+                                        <p class='text-danger inputerror'>{{ $message }} </p>
+                                        @enderror
+                                </div>
+                            </div>
+                            <button type="submit" class="btn bg-gradient-dark">Submit</button>
+                        </form>
+</div>
+            </div>
+        </div>
+        <x-footers.auth></x-footers.auth>
+    </div>
+    <x-plugins></x-plugins>
+
+</x-layout>
