@@ -1,36 +1,35 @@
  <!DOCTYPE html>
-<html lang="sw">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Language" content="sw">
+  <meta http-equiv="Content-Language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="President’s Office Public Service Management and Good Governance&#039;s Official Website | Tovuti Rasmi ya BAKITA">
+      <meta name="description" content="President’s Office Public Service Management and Good Governance&#039;s Official Web../site | Tovuti Rasmi ya BAKITA">
     <meta name="keywords" content="Tanzania,DODOMA,POPSM,Good Governance,Public Service Management,BAKITA ">
     <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="ms-icon-144x144.html">
   <meta name="theme-color" content="#1D2F6F">
   <meta name="apple-mobile-web-app-status-bar-style" content="#1D2F6F">
 
-  <title>BAKITA
-  </title>
+  <title>BAKITA</title>
 
   <!-- favicons -->
-  <link rel="apple-touch-icon" sizes="57x57" href="site/images/icon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="site/images/icon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="site/images/icon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="site/images/icon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="site/images/icon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="site/images/icon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="site/images/icon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="site/images/icon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="site/images/icon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="site/images/icon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="site/images/icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="site/images/icon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="site/images/bakita_logo.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="../site/images/icon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../site/images/icon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../site/images/icon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../site/images/icon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../site/images/icon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../site/images/icon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../site/images/icon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../site/images/icon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../site/images/icon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../site/images/icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../site/images/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../site/images/icon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../site/images/bakita_logo.png">
 
-  <link rel="stylesheet"  href="site/css/master.min3661.css?v=2.0">
+  <link rel="stylesheet"  href="../site/css/master.min3661.css">
   
 
 
@@ -72,16 +71,16 @@
   
   <input type="hidden" id="base_url" value="index.html">
 
-   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="site/js/jquery.min.js"></script>
-   <script src="site/js/bootstrap.bundle.min.js"></script>
-   <script src="site/js/slick.min.js"></script>
-   <script src="site/js/datatables.min.js"></script>
-   <script src="site/js/magnific-popup.min.js"></script>
+   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../site/js/jquery.min.js"></script>
+   <script src="../site/js/bootstrap.bundle.min.js"></script>
+   <script src="../site/js/slick.min.js"></script>
+   <script src="../site/js/datatables.min.js"></script>
+   <script src="../site/js/magnific-popup.min.js"></script>
 
  
-   <script src="site/js/custom.min.js"></script>
+   <script src="../site/js/custom.min.js"></script>
 
-   <script src="admin/js/visitors-counter/client.min.js"></script>    <script src="admin/js/visitors-counter/visitors.logs.js"></script>
+   <script src="../admin/js/visitors-counter/client.min.js"></script>    <script src="../admin/js/visitors-counter/visitors.logs.js"></script>
 
    <script type="text/javascript">
 

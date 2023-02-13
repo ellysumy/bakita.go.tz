@@ -5,7 +5,7 @@
     <div class="container-fluid ps-2 pe-0">
         <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 d-flex flex-column" href="{{ route('dashboard') }}">
             BAKITA Dashboard
-            <span>BAKITA</span>
+            <!-- <span>BAKITA</span> -->
         </a>
         <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
             data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"

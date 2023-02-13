@@ -44,7 +44,7 @@
   @foreach($books as $book)
   <div class="post-slide7 col-xs-12 col-sm-4 col-md-4 my-2">
     <div class="post-img">
-      <img src="uploads/gallery/istilahi.jpeg" alt="" class="w-100">
+      <img src="/images/{{$book->image_path}}" alt="" class="w-100">
     </div>
 <div class="post-review">
   <ul class="post-bar">
@@ -54,106 +54,19 @@
     Jamii: {{$book->category}}<br>
     Mchapishaji: {{$book->publisher}}</p>
 </div>
-<a href="#" class="read d-block">NUNUA<i class="fa fa-angle-right"></i></a>
+<a href="{{route('swshow', $book->slug)}}" class="read d-block">Angalia Zaidi Kitabu<i class="fa fa-angle-right"></i></a>
 </div>
 @endforeach
- 
- <!-- <div class="post-slide7 col-xs-12 col-sm-4 col-md-4 my-2">
-<div class="post-img">
-  <img src="uploads/gallery/kiswahili_utandawazi.jpeg" alt="" class="w-100">
-                          </div>
-<div class="post-review">
-  <ul class="post-bar">
-    <li class="date-btn text-white">Bei: Tsh 4,000/=</li>
-
-  </ul >
-  <p class="post-description">ISBN: 9987903142<br>
-    Jamii: Machapisho<br>
-    Mchapishaji: BAKITA (2004)</p>
-</div>
-<a href="#" class="read d-block">NUNUA<i class="fa fa-angle-right"></i></a>
-</div> -->
- <!-- <div class="post-slide7 col-xs-12 col-sm-4 col-md-4 my-2">
-<div class="post-img">
- <img src="uploads/gallery/tafsiri_sanifu.jpeg" alt="" class="w-100">
-                          </div>
-<div class="post-review">
-  <ul class="post-bar">
-    <li class="date-btn text-white">Bei: Tsh 3,000/=</li>
-
-  </ul >
-  <p class="post-description">ISBN: 9987903134<br>
-    Jamii: Machapisho<br>
-    Mchapishaji: BAKITA (2004)</p>
-</div>
-<a href="#" class="read d-block">NUNUA<i class="fa fa-angle-right"></i></a>
-</div> -->
 <div class="col-md-12">
-                            {{ $books->links('sw.custompagination')}}
-                        </div>
+  {{ $books->links('sw.custompagination')}}
+</div>
+ 
+ 
+
  </div>
-
-     <!-- {!! $books->links() !!} -->
-       
-
 <div class="text-right mt-2">
 </div>
 </div>
 </div>
 
-
-
-<!-- <div class="container mt-3 pb-2">
-            
-  <div class="col-md-12  px-md-2">
-<div class="row mt-4   justify-content-center ">
-  <div class="post-slide7 col-xs-12 col-sm-4 col-md-4 my-2">
-<div class="post-img">
-  <img src="uploads/gallery/kamusi.jpeg" alt="" class="w-100">
-                          </div>
-<div class="post-review">
-  <ul class="post-bar">
-    <li class="date-btn text-white">Bei: Tsh 25,000/=</li>
-  </ul >
-  <p class="post-description">ISBN: 9789987020984<br>
-    Jamii: Kamusi<br>
-    Mchapishaji: BAKITA (2017)</p>
-</div>
-<a href="#" class="read d-block">NUNUA<i class="fa fa-angle-right"></i></a>
-</div>
-<div class="post-slide7 col-xs-12 col-sm-4 col-md-4 my-2">
-<div class="post-img">
-  <img src="uploads/gallery/furahia_kiswahili.jpeg" alt="" class="w-100">
-                          </div>
-<div class="post-review">
-  <ul class="post-bar">
-    <li class="date-btn text-white">Bei: Tsh 15,000/=</li>
-
-  </ul >
-  <p class="post-description">ISBN: 9987720064<br>
-    Jamii: Machapisho<br>
-    Mchapishaji: BAKITA (2013)</p>
-</div>
-<a href="#" class="read d-block">NUNUA<i class="fa fa-angle-right"></i></a>
-</div>
-<div class="post-slide7 col-xs-12 col-sm-4 col-md-4 my-2">
-<div class="post-img">
-                              <img src="uploads/gallery/mwongozo.jpeg" alt="" class="w-100">
-                          </div>
-<div class="post-review">
-  <ul class="post-bar">
-    <li class="date-btn text-white">Bei:Tsh. 6000/=</li>
-
-  </ul >
-  <p class="post-description">ISBN: 9987720064<br>
-    Jamii: Machapisho<br>
-    Mchapishaji: BAKITA (2013)</p>
-</div>
-<a href="#" class="read d-block">NUNUA<i class="fa fa-angle-right"></i></a>
-</div>
-                                                        </div>
-<div class="text-right mt-2">
-</div>
-</div>
-</div> -->
 @stop

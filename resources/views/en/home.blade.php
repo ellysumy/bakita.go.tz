@@ -213,42 +213,25 @@
             <div class="col-md-12  px-md-2">
                 <h4 class="my-2 text-center   section-header">Latest News </h4>
                 <div class="row mt-4   justify-content-center ">
+                  
+                  @foreach ($contents as $content)
                   <div class="post-slide7 col-xs-12 col-sm-4 col-md-4 my-2">
                         <div class="post-img">
-                          <img src="uploads/news/31ff612562509a01d880a16e13709a2e.jpg" alt="" class="w-100">
+                          <img src="/images/{{$content->image_path}}" alt="" class="w-100">
                                                   </div>
                         <div class="post-review">
                           <ul class="post-bar">
-                            <li class="date-btn text-white">Oct 19, 2022</li>
+                       <li class="date-btn text-white">{{ date('jS M Y', strtotime($content->updated_at)) }}</li>
                           </ul >
-                          <p class="post-description">BARAZA LA KISWAHILI LA TAIFA (BAKITA) LINATOA MAFUNZO YA KUIMARISHA STADI ZA KUFUNDISHA KISWAHILI KWA WAGENI SAMBAMBA NA KUTAMBUA RASMI WALIMU WA KISWAHILI KWA WAGENI.</p>
+                          <p class="post-description">{{$content->title}}</p>
                         </div>
-                        <a href="/blogu" class="read d-block">Soma zaidi<i class="fa fa-angle-right"></i></a>
+                        <a href="{{$content->blogpost}}" class="read d-block">Soma zaidi<i class="fa fa-angle-right"></i></a>
                       </div>
-                      <div class="post-slide7 col-xs-12 col-sm-4 col-md-4 my-2">
-                        <div class="post-img">
-                          <img src="uploads/news/31ff612562509a01d880a16e13709a2e.jpg" alt="" class="w-100">
-                          </div>
-                        <div class="post-review">
-                          <ul class="post-bar">
-                            <li class="date-btn text-white">Oct 19, 2022</li>
-                          </ul >
-                          <p class="post-description">BARAZA LA KISWAHILI LA TAIFA (BAKITA) LINATOA MAFUNZO YA KUIMARISHA STADI ZA KUFUNDISHA KISWAHILI KWA WAGENI SAMBAMBA NA KUTAMBUA RASMI WALIMU WA KISWAHILI KWA WAGENI.</p>
-                        </div>
-                        <a href="/blogu" class="read d-block">Soma zaidi<i class="fa fa-angle-right"></i></a>
-                      </div>
-                      <div class="post-slide7 col-xs-12 col-sm-4 col-md-4 my-2">
-                        <div class="post-img">
-                          <img src="uploads/news/31ff612562509a01d880a16e13709a2e.jpg" alt="" class="w-100">
-                        </div>
-                        <div class="post-review">
-                          <ul class="post-bar">
-                            <li class="date-btn text-white">Oct 19, 2022</li>
-                          </ul >
-                          <p class="post-description">BARAZA LA KISWAHILI LA TAIFA (BAKITA) LINATOA MAFUNZO YA KUIMARISHA STADI ZA KUFUNDISHA KISWAHILI KWA WAGENI SAMBAMBA NA KUTAMBUA RASMI WALIMU WA KISWAHILI KWA WAGENI.</p>
-                        </div>
-                        <a href="/blogu" class="read d-block">Soma zaidi<i class="fa fa-angle-right"></i></a>
-                      </div>
+
+                      @endforeach
+
+                      
+                      
                     </div>
                 <div class="text-right mt-2">
                     <a href="/blogu"><i>Read More</i></a>
@@ -502,7 +485,7 @@
                     </div>
 
                  <div class="col-md-6 pr-0">
-                  <h4 class="mb-2 w-100 text-center  section-header">Machapisho </h4>
+                  <h4 class="mb-2 w-100 text-center  section-header">Publications </h4>
                       
                       <div class="row mt-4 pl-3 w-100  mr-0 ">
                         <div class="row mx-0 w-100 bg-white  mb-2   has-hover-bounce  my-xs-1">

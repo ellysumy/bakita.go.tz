@@ -127,11 +127,19 @@ Route::get('sections', function () {
     return view('en.sections'); 
 });
 // Route::get('slider', function () {
-//     return view('en.slider');
+//     return view('en.slider');});
 
-// });
+Route::get('sw/{slug}', [LandingPageController::class, 'swshow'])->name('swshow');
 Route::resource('sw', LandingPageController::class);
-Route::get('en', [LandingPageController::class, 'enindex'])->name('enindex');
+// Route::resource('en', LandingPageController::class);
+Route::get('en', [LandingPageController::class, 'en'])->name('enindex');
+Route::get('vitabu', [LandingPageController::class, 'guestindex'])->name('guestindex');
+Route::get('bookslist', [LandingPageController::class, 'bookslist'])->name('bookslist');
+// Route::get('bookview', [LandingPageController::class, 'bookview'])->name('bookview');
+Route::get('showbook', [LandingPageController::class, 'showbook'])->name('showbook');
+
+Route::resource('/', LandingPageController::class);
+
 Route::get('learnswahili', function () {
     return view('en.learnswahili'); 
 });
@@ -168,12 +176,12 @@ Route::get('maktaba', function () {
 Route::get('library', function () {
     return view('en.library'); 
 });
-Route::get('vitabu', function () {
-    return view('sw.vitabupage'); 
-});
 
-Route::resource('books', BooksController::class);
-Route::get('bookspageview', [BooksController::class, 'guestindex'])->name('guestindex');
+Route::resource('books', BooksController::class)->middleware('auth');
+// Route::resource('books1', BooksController::class);
+// Route::get('/books', [ContentsController::class, 'index'])->middleware('auth')->name('books');
+// Route::get('/addbook', [ContentsController::class, 'store'])->middleware('auth')->name('store');
+// Route::get('bookspageview', [BooksController::class, 'guestindex'])->name('guestindex');
 Route::resource('words',WordsController::class);
 Route::resource('/', LandingPageController::class);
 Route::resource('contents', ContentsController::class);

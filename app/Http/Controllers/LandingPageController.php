@@ -22,10 +22,31 @@ class LandingPageController extends Controller
     {
         $books=Book::orderBy('updated_at', 'DESC')->take(3)->get();
         $sliders = Sliders::all();
-        $contents = Contents::all();
+        $contents = Contents::OrderBy('updated_at', 'DESC')->take(3)->get();
          $words = Words::all();
 
         return view('sw.home', compact('books', 'sliders', 'contents', 'words'));
+    }
+
+    public function guestindex()
+    {
+        $books=Book::orderBy('updated_at', 'DESC')->take(3)->get();
+        $sliders = Sliders::all();
+        $contents = Contents::all();
+         $words = Words::all();
+
+        return view('sw.vitabupage')->with('books' , Book::paginate(3), Book::orderBy('updated_at', 'DESC')->get());
+    }
+
+    public function showbook($slug)
+    {
+        return view('en.showbook')
+            ->with('books', Book::where('slug', $slug)->first());
+    }
+
+     public function bookslist()
+    {
+        return view('en.bookslist')->with('books', Book::paginate(3), Book::orderBy('updated_at', 'DESC')->get());
     }
 
     public function enindex()
@@ -33,6 +54,15 @@ class LandingPageController extends Controller
         $books=Book::orderBy('updated_at', 'DESC')->take(3)->get();
         $sliders = Sliders::all();
         $contents = Contents::all();
+        $words = Words::all();
+
+        return view('en.home', compact('books', 'sliders', 'contents', 'words'));
+    }
+    public function en()
+    {
+        $books=Book::orderBy('updated_at', 'DESC')->take(3)->get();
+        $sliders = Sliders::all();
+        $contents = Contents::OrderBy('updated_at', 'DESC')->take(3)->get();
         $words = Words::all();
 
         return view('en.home', compact('books', 'sliders', 'contents', 'words'));
@@ -71,12 +101,22 @@ class LandingPageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $slug
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
         //
+        $books = Book::where('slug', $slug)->first();
+
+        return view('en.showbook')->with('books', compact('books'));
+    }
+     public function swshow($slug)
+    {
+        //
+        $books = Book::where('slug', $slug)->first();
+
+        return view('sw.kitabuview')->with('books', compact('books'));
     }
 
     /**

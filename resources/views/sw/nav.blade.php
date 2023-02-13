@@ -1,5 +1,5 @@
 <header class="col-12 px-0 position-relative parallax-banner" 
-    style="background:url('site/images/banner2.jpg'); background-size: cover; background-position: center;"
+    style="background:url('/site/images/banner2.jpg'); background-size: cover; background-position: center;"
     data-offset="100px" data-rate="0.5"
 >
 
@@ -9,7 +9,7 @@
                 <div class="carousel-inner h-100">
                                   </div>
               </div>
-        </div>
+        </div>  
     
         <div class="bg-primary h-100 w-100 position-absolute" style="opacity:0.2" > </div>
       
@@ -25,13 +25,13 @@
                            
                             <li class="list-inline-item">
                                 <a title="Switch Language to English" href="/en">
-                                    <object data="site/images/svgs/united-kingdom.svg" type="image/svg+xml" width="12px"></object>
+                                    <object data="/site/images/svgs/united-kingdom.svg" type="image/svg+xml" width="12px"></object>
                                     English
                                 </a>
                             </li>
                             <li class="list-inline-item">
                                 <a title="Switch Language to swahili" href="/sw">
-                                    <object data="site/images/svgs/tanzania.svg" type="image/svg+xml" width="12px"></object>
+                                    <object data="/site/images/svgs/tanzania.svg" type="image/svg+xml" width="12px"></object>
                                     Kiswahili
                                 </a>
                             </li>
@@ -48,7 +48,7 @@
             <div class="container px-0">
                 <div class="row ">
                     <div class="col-2 float-left py-1 text-left my-auto">
-                        <a href="#"https://www.bakita.go.tz><img src="site/images/emblem.png" alt="Tanzania emblem" class="mx-auto img-fluid" style="width:70px;"></a>
+                        <a href="#"https://www.bakita.go.tz><img src="/site/images/emblem.png" alt="Tanzania emblem" class="mx-auto img-fluid" style="width:70px;"></a>
                     </div>
     
                     <div class="col-8 text-center text-xs-left my-auto">
@@ -61,7 +61,7 @@
                     </div>
 
                     <div class="col-2 float-left py-1 text-left my-auto">
-                      <a href="#"https://www.bakita.go.tz><img src="site/images/bakita.png" alt="Tanzania emblem" class="mx-auto img-fluid" style="width:100px;"></a>
+                      <a href="#"https://www.bakita.go.tz><img src="/site/images/bakita.png" alt="Tanzania emblem" class="mx-auto img-fluid" style="width:100px;"></a>
                   </div>
     
                 </div>
