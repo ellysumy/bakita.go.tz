@@ -17,6 +17,7 @@
                                 <div class="table-responsive p-0">
                                     <table class="table align-items-center mb-0">
                                         <thead>
+
                                             <tr>
                                                 <th
                                                     class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
@@ -38,6 +39,8 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+
+                                        @foreach ($books as $book)
                                             <tr>
                                                 <td>
                                                     <div class="d-flex px-2 py-1">
@@ -47,22 +50,22 @@
                                                                 alt="user1">
                                                         </div>
                                                         <div class="d-flex flex-column justify-content-center">
-                                                            <h6 class="mb-0 text-sm">Kamusi Kuu ya Kiswahili</h6>
-                                                            <p class="text-xs text-secondary mb-0">category:Kamusi
+                                                            <h6 class="mb-0 text-sm">{{$book->name}}</h6>
+                                                            <p class="text-xs text-secondary mb-0">category:{{$book->category}}
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <p class="text-xs font-weight-bold mb-0">BAKITA</p>
-                                                    <p class="text-xs text-secondary mb-0">BAKITA</p>
+                                                    <p class="text-xs font-weight-bold mb-0">{{$book->publisher}}</p>
+                                                    <p class="text-xs text-secondary mb-0">{{$book->publisher}}</p>
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
-                                                    <span class="badge badge-sm bg-gradient-success">9789987020984</span>
+                                                    <span class="badge badge-sm bg-gradient-success">{{$book->isbn}}</span>
                                                 </td>
                                                 <td class="align-middle text-center">
                                                     <span
-                                                        class="text-secondary text-xs font-weight-bold">TZS</span>
+                                                        class="text-secondary text-xs font-weight-bold">{{$book->price}}</span>
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
                                                     <a href="javascript:;"
@@ -84,374 +87,8 @@
                                                     </a>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex px-2 py-1">
-                                                        <div>
-                                                            <img src="{{ asset('uploads') }}/gallery/kamusi.jpeg"
-                                                                class="avatar avatar-sm me-3 border-radius-lg"
-                                                                alt="user1">
-                                                        </div>
-                                                        <div class="d-flex flex-column justify-content-center">
-                                                            <h6 class="mb-0 text-sm">Kamusi Kuu ya Kiswahili</h6>
-                                                            <p class="text-xs text-secondary mb-0">category:Kamusi
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <p class="text-xs font-weight-bold mb-0">BAKITA</p>
-                                                    <p class="text-xs text-secondary mb-0">BAKITA</p>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <span class="badge badge-sm bg-gradient-success">9789987020984</span>
-                                                </td>
-                                                <td class="align-middle text-center">
-                                                    <span
-                                                        class="text-secondary text-xs font-weight-bold">TZS</span>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        Edit
-                                                    </a> |
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        Delete
-                                                    </a>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        View
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex px-2 py-1">
-                                                        <div>
-                                                            <img src="{{ asset('uploads') }}/gallery/kamusi.jpeg"
-                                                                class="avatar avatar-sm me-3 border-radius-lg"
-                                                                alt="user1">
-                                                        </div>
-                                                        <div class="d-flex flex-column justify-content-center">
-                                                            <h6 class="mb-0 text-sm">Kamusi Kuu ya Kiswahili</h6>
-                                                            <p class="text-xs text-secondary mb-0">category:Kamusi
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <p class="text-xs font-weight-bold mb-0">BAKITA</p>
-                                                    <p class="text-xs text-secondary mb-0">BAKITA</p>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <span class="badge badge-sm bg-gradient-success">9789987020984</span>
-                                                </td>
-                                                <td class="align-middle text-center">
-                                                    <span
-                                                        class="text-secondary text-xs font-weight-bold">TZS</span>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        Edit
-                                                    </a> |
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        Delete
-                                                    </a>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        View
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex px-2 py-1">
-                                                        <div>
-                                                            <img src="{{ asset('uploads') }}/gallery/kamusi.jpeg"
-                                                                class="avatar avatar-sm me-3 border-radius-lg"
-                                                                alt="user1">
-                                                        </div>
-                                                        <div class="d-flex flex-column justify-content-center">
-                                                            <h6 class="mb-0 text-sm">Kamusi Kuu ya Kiswahili</h6>
-                                                            <p class="text-xs text-secondary mb-0">category:Kamusi
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <p class="text-xs font-weight-bold mb-0">BAKITA</p>
-                                                    <p class="text-xs text-secondary mb-0">BAKITA</p>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <span class="badge badge-sm bg-gradient-success">9789987020984</span>
-                                                </td>
-                                                <td class="align-middle text-center">
-                                                    <span
-                                                        class="text-secondary text-xs font-weight-bold">TZS</span>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        Edit
-                                                    </a> |
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        Delete
-                                                    </a>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        View
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex px-2 py-1">
-                                                        <div>
-                                                            <img src="{{ asset('uploads') }}/gallery/kamusi.jpeg"
-                                                                class="avatar avatar-sm me-3 border-radius-lg"
-                                                                alt="user1">
-                                                        </div>
-                                                        <div class="d-flex flex-column justify-content-center">
-                                                            <h6 class="mb-0 text-sm">Kamusi Kuu ya Kiswahili</h6>
-                                                            <p class="text-xs text-secondary mb-0">category:Kamusi
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <p class="text-xs font-weight-bold mb-0">BAKITA</p>
-                                                    <p class="text-xs text-secondary mb-0">BAKITA</p>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <span class="badge badge-sm bg-gradient-success">9789987020984</span>
-                                                </td>
-                                                <td class="align-middle text-center">
-                                                    <span
-                                                        class="text-secondary text-xs font-weight-bold">TZS</span>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        Edit
-                                                    </a> |
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        Delete
-                                                    </a>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        View
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex px-2 py-1">
-                                                        <div>
-                                                            <img src="{{ asset('uploads') }}/gallery/kamusi.jpeg"
-                                                                class="avatar avatar-sm me-3 border-radius-lg"
-                                                                alt="user1">
-                                                        </div>
-                                                        <div class="d-flex flex-column justify-content-center">
-                                                            <h6 class="mb-0 text-sm">Kamusi Kuu ya Kiswahili</h6>
-                                                            <p class="text-xs text-secondary mb-0">category:Kamusi
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <p class="text-xs font-weight-bold mb-0">BAKITA</p>
-                                                    <p class="text-xs text-secondary mb-0">BAKITA</p>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <span class="badge badge-sm bg-gradient-success">9789987020984</span>
-                                                </td>
-                                                <td class="align-middle text-center">
-                                                    <span
-                                                        class="text-secondary text-xs font-weight-bold">TZS</span>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        Edit
-                                                    </a> |
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        Delete
-                                                    </a>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        View
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex px-2 py-1">
-                                                        <div>
-                                                            <img src="{{ asset('uploads') }}/gallery/kamusi.jpeg"
-                                                                class="avatar avatar-sm me-3 border-radius-lg"
-                                                                alt="user1">
-                                                        </div>
-                                                        <div class="d-flex flex-column justify-content-center">
-                                                            <h6 class="mb-0 text-sm">Kamusi Kuu ya Kiswahili</h6>
-                                                            <p class="text-xs text-secondary mb-0">category:Kamusi
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <p class="text-xs font-weight-bold mb-0">BAKITA</p>
-                                                    <p class="text-xs text-secondary mb-0">BAKITA</p>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <span class="badge badge-sm bg-gradient-success">9789987020984</span>
-                                                </td>
-                                                <td class="align-middle text-center">
-                                                    <span
-                                                        class="text-secondary text-xs font-weight-bold">TZS</span>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        Edit
-                                                    </a> |
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        Delete
-                                                    </a>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        View
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex px-2 py-1">
-                                                        <div>
-                                                            <img src="{{ asset('uploads') }}/gallery/kamusi.jpeg"
-                                                                class="avatar avatar-sm me-3 border-radius-lg"
-                                                                alt="user1">
-                                                        </div>
-                                                        <div class="d-flex flex-column justify-content-center">
-                                                            <h6 class="mb-0 text-sm">Kamusi Kuu ya Kiswahili</h6>
-                                                            <p class="text-xs text-secondary mb-0">category:Kamusi
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <p class="text-xs font-weight-bold mb-0">BAKITA</p>
-                                                    <p class="text-xs text-secondary mb-0">BAKITA</p>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <span class="badge badge-sm bg-gradient-success">9789987020984</span>
-                                                </td>
-                                                <td class="align-middle text-center">
-                                                    <span
-                                                        class="text-secondary text-xs font-weight-bold">TZS</span>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        Edit
-                                                    </a> |
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        Delete
-                                                    </a>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        View
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex px-2 py-1">
-                                                        <div>
-                                                            <img src="{{ asset('uploads') }}/gallery/kamusi.jpeg"
-                                                                class="avatar avatar-sm me-3 border-radius-lg"
-                                                                alt="user1">
-                                                        </div>
-                                                        <div class="d-flex flex-column justify-content-center">
-                                                            <h6 class="mb-0 text-sm">Kamusi Kuu ya Kiswahili</h6>
-                                                            <p class="text-xs text-secondary mb-0">category:Kamusi
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <p class="text-xs font-weight-bold mb-0">BAKITA</p>
-                                                    <p class="text-xs text-secondary mb-0">BAKITA</p>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <span class="badge badge-sm bg-gradient-success">9789987020984</span>
-                                                </td>
-                                                <td class="align-middle text-center">
-                                                    <span
-                                                        class="text-secondary text-xs font-weight-bold">TZS</span>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        Edit
-                                                    </a> |
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        Delete
-                                                    </a>
-                                                </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <a href="javascript:;"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
-                                                        View
-                                                    </a>
-                                                </td>
-                                            </tr>
+                                            @endforeach
+                                            
                                         </tbody>
                                     </table>
                                 </div>

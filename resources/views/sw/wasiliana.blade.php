@@ -17,7 +17,14 @@
         <!-- <h5 class="card-title"> Contact Us  </h5> -->
         <!--Section: Contact v.2-->
 <section class="mb-4">
-
+@if(Session::has('success'))
+                        <div class="alert alert-success">
+                            {{ Session::get('success') }}
+                            @php
+                                Session::forget('success');
+                            @endphp
+                        </div>
+                        @endif
     <!--Section heading-->
     <h2 class="h1-responsive font-weight-bold text-center my-4">Wasiliana Nasi</h2>
     <!--Section description-->
@@ -28,7 +35,7 @@
         <!--Grid column-->
         <div class="col-md-9 mb-md-0 mb-5">
 
-            <form id="contact-form" name="contact-form" action="mail" method="POST">
+            <form id="contact-form" name="contact-form" action="/contact-form" method="POST">
               @csrf
                 <!--Grid row-->
                 <div class="row">

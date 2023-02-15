@@ -18,9 +18,9 @@ class ContentsController extends Controller
         //
         // $contents = Contents::all();
         return view('pages.contents.contents')
-            ->with('contents');
+            // ->with('contents');
             // return view('pages.contents')
-            // ->with('contents', Contents::orderBy('updated_at', 'DESC')->get());
+            ->with('contents', Contents::orderBy('updated_at', 'DESC')->get());
     }
 
     /**

@@ -33,9 +33,9 @@ Route::get('/sw', function () {
 // Route::get('/en', function () {
 //     return view('en.home');
 // });
-Route::get('home', function () {
-    return view('sw.home'); 
-});
+// Route::get('home', function () {
+//     return view('sw.home'); 
+// });
 Route::get('huduma', function () {
     return view('sw.huduma'); 
 });
@@ -194,6 +194,7 @@ Route::post('/contact-form', [App\Http\Controllers\ContactController::class, 'st
 Route::get('/bookspage', [App\Http\Controllers\BooksController::class, 'show'])->middleware('auth')->name('bookspage');
 
 Route::get('/contents', [App\Http\Controllers\ContentsController::class, 'index'])->middleware('auth')->name('contents');
+Route::get('/library', [App\Http\Controllers\ContentsController::class, 'index'])->middleware('auth')->name('contents');
 
 Route::get('/addbook', [App\Http\Controllers\BooksController::class, 'index'])->middleware('auth')->name('books');
 Route::get('/addcontent', [App\Http\Controllers\ContentsController::class, 'create'])->middleware('auth')->name('contents');
@@ -207,7 +208,7 @@ Route::get('#', [App\Http\Controllers\SlidersController::class, 'create'])->midd
 
 Route::get('book-store', [App\Http\Controllers\SlidersController::class, 'store'])->middleware('auth')->name('book-store');
 
-Auth::routes();
+// Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -218,8 +219,9 @@ Route::get('/dashboard1', [App\Http\Controllers\HomeController::class, 'admin'])
 
 Route::get('/admin', function () {return redirect('sign-in');})->middleware('guest');
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
+// Route::get('/dashboard', [DashboardController::class, 'adminHome'])->name('dashboard')->middleware('is_admin');
 Route::get('sign-up', [RegisterController::class, 'create'])->middleware('guest')->name('register');
-Route::post('sign-up', [RegisterController::class, 'store'])->middleware('guest');
+// Route::post('sign-up', [RegisterController::class, 'store'])->middleware('guest');
 Route::get('sign-in', [SessionsController::class, 'create'])->middleware('guest')->name('login');
 Route::post('sign-in', [SessionsController::class, 'store'])->middleware('guest');
 Route::post('verify', [SessionsController::class, 'show'])->middleware('guest');

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contact;
-use App\Mail;
+use Mail;
 
 
 class ContactController extends Controller
@@ -25,7 +25,6 @@ class ContactController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|email',
-            'phone' => 'required|digits:10|numeric',
             'subject' => 'required',
             'message' => 'required',
         ]);
@@ -38,12 +37,11 @@ class ContactController extends Controller
         Mail::send('contactMail', array(
             'name' => $input['name'],
             'email' => $input['email'],
-            'phone' => $input['phone'],
             'subject' => $input['subject'],
             'message' => $input['message'],
         ), function($message) use ($request){
             $message->from($request->email);
-            $message->to('admin@admin.com', 'Admin')->subject($request->get('subject'));
+            $message->to('ellysumy@gmail.com', 'Admin')->subject($request->get('subject'));
         });
 
         return redirect()->back()->with(['success' => 'Contact Form Submit Successfully']);

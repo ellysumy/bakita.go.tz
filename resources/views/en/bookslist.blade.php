@@ -59,36 +59,6 @@
 
 @endforeach
  
- <!-- <div class="post-slide7 col-xs-12 col-sm-4 col-md-4 my-2">
-<div class="post-img">
-  <img src="uploads/gallery/kiswahili_utandawazi.jpeg" alt="" class="w-100">
-                          </div>
-<div class="post-review">
-  <ul class="post-bar">
-    <li class="date-btn text-white">Bei: Tsh 4,000/=</li>
-
-  </ul >
-  <p class="post-description">ISBN: 9987903142<br>
-    Jamii: Machapisho<br>
-    Mchapishaji: BAKITA (2004)</p>
-</div>
-<a href="#" class="read d-block">NUNUA<i class="fa fa-angle-right"></i></a>
-</div> -->
- <!-- <div class="post-slide7 col-xs-12 col-sm-4 col-md-4 my-2">
-<div class="post-img">
- <img src="uploads/gallery/tafsiri_sanifu.jpeg" alt="" class="w-100">
-                          </div>
-<div class="post-review">
-  <ul class="post-bar">
-    <li class="date-btn text-white">Bei: Tsh 3,000/=</li>
-
-  </ul >
-  <p class="post-description">ISBN: 9987903134<br>
-    Jamii: Machapisho<br>
-    Mchapishaji: BAKITA (2004)</p>
-</div>
-<a href="#" class="read d-block">NUNUA<i class="fa fa-angle-right"></i></a>
-</div> -->
 <div class="col-md-12">
                             {{ $books->links('sw.custompagination')}}
                         </div>

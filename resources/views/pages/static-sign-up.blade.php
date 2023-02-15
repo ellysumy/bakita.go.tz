@@ -29,7 +29,7 @@
                                         <p class="mb-0">Enter your email and password to register</p>
                                     </div>
                                     <div class="card-body">
-                                        <form>
+                                        <!-- <form>
                                             <div class="input-group input-group-outline mb-3">
                                                 <label class="form-label">Name</label>
                                                 <input type="text" class="form-control" name="name" required>
@@ -55,7 +55,9 @@
                                                     class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">Sign
                                                     Up</button>
                                             </div>
-                                        </form>
+                                        </form> -->
+                                        <p>Sign up is clossed</p>
+
                                     </div>
                                     <div class="card-footer text-center pt-0 px-lg-2 px-1">
                                         <p class="mb-2 text-sm mx-auto">

@@ -38,6 +38,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        @foreach ($contents as $content)
                                             <tr>
                                                 <td>
                                                     <div class="d-flex px-2 py-1">
@@ -47,23 +48,23 @@
                                                                 alt="user1">
                                                         </div>
                                                         <div class="d-flex flex-column justify-content-center">
-                                                            <h6 class="mb-0 text-sm">Kamusi Kuu ya Kiswahili</h6>
-                                                            <p class="text-xs text-secondary mb-0">category:Kamusi
+                                                            <h6 class="mb-0 text-sm">{{content->title}}</h6>
+                                                            <p class="text-xs text-secondary mb-0">category:{{$content->category}}
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <p class="text-xs font-weight-bold mb-0">BAKITA</p>
-                                                    <p class="text-xs text-secondary mb-0">BAKITA</p>
+                                                    <p class="text-xs font-weight-bold mb-0">{{$content->publisher}}</p>
+                                            <p class="text-xs text-secondary mb-0">{{$content->publisher}}</p>
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
-                                                    <span class="badge badge-sm bg-gradient-success">Books</span>
+                                                    <span class="badge badge-sm bg-gradient-success">{{$content->type}}</span>
                                                 </td>
-                                                <td class="align-middle text-center">
+                                                <!-- <td class="align-middle text-center">
                                                     <span
                                                         class="text-secondary text-xs font-weight-bold">TZS</span>
-                                                </td>
+                                                </td> -->
                                                 <td class="align-middle text-center text-sm">
                                                     <a href="javascript:;"
                                                         class="text-secondary font-weight-bold text-xs"
@@ -84,6 +85,8 @@
                                                     </a>
                                                 </td>
                                             </tr>
+
+                                            @endforeach
                                             <tr>
                                                 <td>
                                                     <div class="d-flex px-2 py-1">
