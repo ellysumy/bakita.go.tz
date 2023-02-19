@@ -45,7 +45,7 @@
                                                 <td>
                                                     <div class="d-flex px-2 py-1">
                                                         <div>
-                                                            <img src="{{ asset('uploads') }}/gallery/kamusi.jpeg"
+                                                            <img src="images/{{$book->image_path}}"
                                                                 class="avatar avatar-sm me-3 border-radius-lg"
                                                                 alt="user1">
                                                         </div>

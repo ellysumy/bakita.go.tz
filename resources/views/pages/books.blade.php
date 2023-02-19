@@ -95,10 +95,10 @@
                                  <div class="mb-3 col-md-6">
                                     <label class="form-label">Select Book Category</label>
                                     <select id="cars" name="category" class="form-control border border-2 p-2" placeholder=" Please Select One Book Category">
-                                      <option value="volvo">Academic</option>
-                                      <option value="saab">Social</option>
-                                      <option value="fiat">Business</option>
-                                      <option value="audi">Personal</option>
+                                      <option value="volvo">Publications</option>
+                                      <option value="saab">Dictionaries</option>
+                                      <option value="fiat">Magazines</option>
+                                      <option value="audi">Newspaper</option>
                                     </select>
                                     @error('category')
                                     <p class='text-danger inputerror'>{{ $message }} </p>

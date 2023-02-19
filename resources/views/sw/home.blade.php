@@ -64,7 +64,7 @@
           <div class="slider">
               <div id="myCarousel" class="carousel px-0 slide carousel-fade pt-3" data-ride="carousel" data-interval="10000">
                 <div class="carousel-inner">
-                    <div class="carousel-item rounded-0  active  ">
+                  <div class="carousel-item rounded-0  active  ">
                       <img class="d-block w-100 rounded-000" alt="Jamhuri ya Muungano wa Tanzania" src="uploads/gallery/slider2.png">
                       <div class="mask flex-center">
                         <div class="container">
@@ -77,20 +77,37 @@
                         </div>
                       </div>
                     </div>
-                                      <div class="carousel-item rounded-0 ">
-                      <img class="d-block w-100 rounded-000" alt="Jamhuri ya Muungano wa Tanzania" src="uploads/gallery/slider1.png">
+                 <!--  @foreach ($slider1 as $slider11)
+                    <div class="carousel-item rounded-0  active  ">
+                      <img class="d-block w-100 rounded-000" alt="Jamhuri ya Muungano wa Tanzania" src="/images/{{$slider11->image_path}}">
                       <div class="mask flex-center">
                         <div class="container">
                           <div class="row align-items-center">
                             <div class="col-md-12 order-md-1 order-2 text-center">
-                              <p class="text-white ">Kikao kati ya Akademia ya Afrika ya Lugha, BAKITA na mchapishaji wa vitabu mkuki na nyota wakijadiliana namna watakavyoshirikiana kutekeleza Mango wa Dares Salaam wa Kiswahili kama lugha ya kazi ya Umoja wa Afrika na Kiswahili kama lugha ya mawasiliano mapana Afrika tarehe 16/9/2022
+                              <p class="text-white ">{{$slider11->description}}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+                    @endforeach
+                                      @foreach ($sliders as $slider)
+                       <div class="carousel-item rounded-0">
+                      <img class="d-block w-100 rounded-000" alt="Jamhuri ya Muungano wa Tanzania" src="/images/{{$slider->image_path}}">
+                      <div class="mask flex-center">
+                        <div class="container">
+                          <div class="row align-items-center">
+                            <div class="col-md-12 order-md-1 order-2 text-center">
+                              <p class="text-white ">{{$slider-> description}}
                               </p>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                                      <div class="carousel-item rounded-0 ">
+                    @endforeach
+                                      <!-- <div class="carousel-item rounded-0 ">
                       <img class="d-block w-100 rounded-000" alt="Jamhuri ya Muungano wa Tanzania" src="uploads/gallery/slider2.png">
                       <div class="mask flex-center">
                         <div class="container">
@@ -164,9 +181,9 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                     
-                    <div class="carousel-item rounded-0 ">
+                    <!-- <div class="carousel-item rounded-0 ">
                       <img class="d-block w-100 rounded-000" alt="Jamhuri ya Muungano wa Tanzania" src="uploads/gallery/slider8.png">
                       <div class="mask flex-center">
                         <div class="container">
@@ -177,7 +194,7 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                                   </div>
                 <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                   

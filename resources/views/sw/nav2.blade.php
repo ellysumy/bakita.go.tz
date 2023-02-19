@@ -57,7 +57,7 @@
                         </h4>
                         <br>
                         <h4 class="mb-1 title text-white title-main align-items-center">
-                          Baraza la Kiswahili la Taifa(BAKITA)
+                          Baraza la Kiswahili la Taifa (BAKITA)
                         </h4>
                     </div>
 

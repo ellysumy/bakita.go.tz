@@ -212,7 +212,7 @@ Route::get('book-store', [App\Http\Controllers\SlidersController::class, 'store'
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/slider', [App\Http\Controllers\LandingPageController::class, 'index'])->name('slider');
+Route::get('/slider', [App\Http\Controllers\LandingPageController::class, 'sliders'])->name('slider');
 // Route::get('/en', [App\Http\Controllers\LandingPageController::class, 'enindex'])->name('enindex');
 
 Route::get('/dashboard1', [App\Http\Controllers\HomeController::class, 'admin'])->name('dashboard');

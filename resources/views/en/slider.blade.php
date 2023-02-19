@@ -11,7 +11,8 @@
           <div class="slider">
               <div id="myCarousel" class="carousel px-0 slide carousel-fade pt-3" data-ride="carousel" data-interval="5000">
                 <div class="carousel-inner">
-                    <div class="carousel-item rounded-0  active  ">
+                  @foreach ($slider1 as $slider11)
+                    <div class="carousel-item rounded-0 active ">
                       <img class="d-block w-100 rounded-000" alt="Jamhuri ya Muungano wa Tanzania" src="uploads/gallery/slider2.png">
                       <div class="mask flex-center">
                         <div class="container">
@@ -23,9 +24,10 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> 
+                    @endforeach
                     @foreach ($sliders as $slider)
-                       <div class="carousel-item rounded-0 ">
+                       <div class="carousel-item rounded-0">
                       <img class="d-block w-100 rounded-000" alt="Jamhuri ya Muungano wa Tanzania" src="/images/{{$slider->image_path}}">
                       <div class="mask flex-center">
                         <div class="container">

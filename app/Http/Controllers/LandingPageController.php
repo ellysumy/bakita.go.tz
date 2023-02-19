@@ -24,8 +24,9 @@ class LandingPageController extends Controller
         $sliders = Sliders::all();
         $contents = Contents::OrderBy('updated_at', 'DESC')->take(3)->get();
          $words = Words::all();
+         $slider1 = Sliders::OrderBy('updated_at', 'DESC')->take(1)->get();
 
-        return view('sw.home', compact('books', 'sliders', 'contents', 'words'));
+        return view('sw.home', compact('books', 'sliders','slider1', 'contents', 'words'));
     }
 
     public function guestindex()
@@ -43,6 +44,12 @@ class LandingPageController extends Controller
         return view('en.showbook')
             ->with('books', Book::where('slug', $slug)->first());
     }
+    public function sliders()
+    {
+       
+        return view('en.slider')
+            ->with('sliders', Sliders::orderBy('updated_at', 'DESC')->take(3)->get());
+    }
 
      public function bookslist()
     {
@@ -55,8 +62,9 @@ class LandingPageController extends Controller
         $sliders = Sliders::all();
         $contents = Contents::all();
         $words = Words::all();
+        $slider2 = Sliders::OrderBy('updated_at', 'DESC')->take(1)->get();
 
-        return view('en.home', compact('books', 'sliders', 'contents', 'words'));
+        return view('en.home', compact('books', 'sliders', 'slider2','contents', 'words'));
     }
     public function en()
     {
